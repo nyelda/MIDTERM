@@ -2,11 +2,11 @@ from flask import Flask
 from flask import request
 from flask import render_template
 
-sample = Flask(__name__)
+app = Flask(__name__)
 
-@sample.route("/")
+@app.route("/")
 def main():
-    return render_template("registration.html")
+    return render_template("login.html")
 
 if __name__ == "__main__":
-    sample.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=5000)
